@@ -57,7 +57,7 @@ jobs:
                   platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
                   push: true
                   tags: |
-                      ghcr.io/${{ github.repository_owner }}/base:${{ env.OS_NAME }}-core-${{ env.OS_VERSION }}-${{ env.CORE_VERSION }} # Use GitHub Container Registry namespace and repository owner name
-                      ghcr.io/${{ github.repository_owner }}/base:${{ env.OS_NAME }}-core-latest # Use GitHub Container Registry namespace and repository owner name
+                      ghcr.io/${{ github.repository_owner }}/core:${{ env.OS_NAME }}-core-${{ env.OS_VERSION }}-${{ env.CORE_VERSION }} # Use GitHub Container Registry namespace and repository owner name
+                      ghcr.io/${{ github.repository_owner }}/core:${{ env.OS_NAME }}-core-latest # Use GitHub Container Registry namespace and repository owner name
                   cache-from: type=local,src=/tmp/.buildx-cache
                   cache-to: type=local,dest=/tmp/.buildx-cache-new
