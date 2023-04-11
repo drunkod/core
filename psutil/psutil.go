@@ -2,6 +2,7 @@ package psutil
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"io"
 	"io/fs"
