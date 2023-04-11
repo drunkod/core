@@ -284,6 +284,10 @@ func (u *util) cpuTimes() (*cpuTimesStat, error) {
 		return nil, err
 	}
 
+	if len(times) == 0 {
+		return nil, errors.New("cpu.Times() returned an empty slice")
+	}
+
 	s := &cpuTimesStat{
 		total:  cpuTotal(&times[0]),
 		system: times[0].System,
